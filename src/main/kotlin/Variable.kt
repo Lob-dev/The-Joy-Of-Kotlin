@@ -23,7 +23,9 @@ fun main(args: Array<String>) {
     // Late initialization : 필요할 때 초기화하고 사용할 수 있는 방식이다. -> 초기화되지 않은 상태를 접근하면 NPE가 발생한다.
 
         // lateinit 을 통한 Late initialization 방식
-        // var 변수와 타입을 미리 선언한다. -> 해당 방식은 var 타입만을 사용할 수 있으며, Double, Int, Boolean 같은 Primitive, Null, Custom getter/setter 는 사용할 수 없다.
+        // var 변수와 타입을 미리 선언한다. -> 해당 방식은 var 타입만을 사용할 수 있으며, Double, Int, Boolean 같은 Non-object Type,
+        // Null, Custom getter/setter 는 사용할 수 없다.
+
         // 즉 String 과 Object 만 사용할 수 있다.
     lateinit var area: String
 
