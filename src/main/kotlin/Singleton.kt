@@ -20,7 +20,7 @@ object Singleton {
     }
 }
 
-open class Hello(val name: String) {
+open class Hello(private val name: String) {
     override fun toString(): String {
         return name
     }
