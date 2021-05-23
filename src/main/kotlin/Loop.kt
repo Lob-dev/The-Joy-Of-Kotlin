@@ -1,7 +1,7 @@
 
 fun main(args: Array<String>) {
 
-    // until 는 증가할 범위를 만들어낸다. (끝의 값을 포함하지 않는다.)  0 ~ until
+    // until 는 증가할 범위를 만들어낸다. (끝의 값을 포함하지 않는다.)  0 ~ until(n-1)
     // step 은 증가하는 값을 만들어낸다.
     // 0, 2, 4, 6, 8
     for (i in 0 until 10 step 2) println(i)
@@ -21,4 +21,16 @@ fun main(args: Array<String>) {
     val users = arrayListOf("lob", "jay", "mont")
     for (name in users) println(name)
 
+    println("----------")
+
+    // index 와 name 을 같이 사용하는 방법
+    for ((index, name) in users.withIndex()) println("$index - $name")
+
+    println("----------")
+
+    var index = 0
+    while (index < 10) {
+        println(index)
+        index++
+    }
 }
