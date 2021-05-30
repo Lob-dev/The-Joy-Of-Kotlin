@@ -33,4 +33,25 @@ fun main(args: Array<String>) {
         println(index)
         index++
     }
+
+    println("----------")
+
+    // 반복문 횟수에 따라 값을 감소시키는 down to 연산자도 존재한다.
+    for (i in 5.downTo(1)) println("$i")
+
+    println("----------")
+
+    for (i in 5 downTo 1) println("$i")
+
+    println("----------")
+
+    for (i in 10 downTo 0 step 2) println("$i")
+
+    println("----------")
+
+    // 필터를 정의하여 조건식에 따라서 내부로 넘길 값을 필터링할 수 있다.
+    for (i in (1..10).filter{ it % 3 == 0 || it % 5 == 0 }) {
+        println("$i")
+    }
+
 }
