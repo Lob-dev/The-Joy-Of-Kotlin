@@ -1,0 +1,27 @@
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/sample
+    username: name
+    password: password
+
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    open-in-view: false
+    properties:
+      format-sql: true
+
+oauth2:
+  registration:
+    google:
+      client-id:
+      client-secret:
+    kakao:
+      client-id:
+      client-secret: 
+      authorization_uri: "https://kauth.kakao.com/oauth/authorize"
+      redirect-uri: "{baseUrl}/{action}/oauth2/code/{registrationId}"
+      token_uri: "https://kauth.kakao.com/oauth/token"
+      user-info-uri: "https://kapi.kakao.com/v2/user/me"
