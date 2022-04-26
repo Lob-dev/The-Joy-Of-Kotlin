@@ -1,2 +1,2 @@
 # The-Joy-Of-Kotlin
-개인 Kotlin 학습 Repo 입니다.
+Kotlin Ecosystem 및 Java Ecosystem 연동과 관련된 학습 Repo (기존 Repo 통합)
