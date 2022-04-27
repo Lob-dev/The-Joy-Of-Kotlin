@@ -1,3 +1,5 @@
+package com.lob.kotlin.demo.syntax
+
 import java.lang.StringBuilder
 
 fun main(args: Array<String>) {
@@ -16,15 +18,15 @@ fun main(args: Array<String>) {
     val person1 = Person("lob")
     val person2 = Person("lob")
 
-    val human1 = Human("lob")
-    val human2 = Human("lob")
+    val human1 = Class("lob")
+    val human2 = Class("lob")
 
     // Structural Equality (‘==’)
-        // Basic Type 을 비교할 때에는 값을 비교하게 된다.
+    // Basic Type 을 비교할 때에는 값을 비교하게 된다.
     print("num == : ")
     println(num1 == num2)
 
-        // Reference Type 을 비교할 때에는 내부적으로 equals 를 호출하여 값을 비교하게 된다.
+    // Reference Type 을 비교할 때에는 내부적으로 equals 를 호출하여 값을 비교하게 된다.
     print("str == : ")
     println(str1 == str2)
 
@@ -39,7 +41,7 @@ fun main(args: Array<String>) {
     println(human1 == human2)
 
     // Referential equality (‘===’)
-        // Reference Type 을 참조 값으로 비교하려면 === 을 사용하면 된다. 이는 자바의 == 와 동일한 역할을 한다.
+    // Reference Type 을 참조 값으로 비교하려면 === 을 사용하면 된다. 이는 자바의 == 와 동일한 역할을 한다.
     print("str === : ")
     println(str3 === str4)
 

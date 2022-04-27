@@ -1,3 +1,4 @@
+package com.lob.kotlin.demo.syntax
 
 fun main(args: Array<String>) {
 
@@ -26,4 +27,4 @@ open class Hello(private val name: String) {
     }
 }
 
-object Insatance: Hello("lob")
+object Insatance : Hello("lob")

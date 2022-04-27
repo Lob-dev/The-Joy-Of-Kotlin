@@ -1,3 +1,4 @@
+package com.lob.kotlin.demo.syntax
 
 fun main(args: Array<String>) {
 
@@ -5,10 +6,10 @@ fun main(args: Array<String>) {
     val s: String? = returnNull()
 
     // 해당 코드는 컴파일 하지 못한다.
-    //val v = s.length
+    // val v = s.length
 
     // Null 을 처리하는 코드 -> 자바와 비슷하다.
-    val v = if(s != null) s.length.toString() else null
+    val v = if (s != null) s.length.toString() else null
     println(v)
 
     // ?. 는 안전한 호출 연산자라고 부른다.

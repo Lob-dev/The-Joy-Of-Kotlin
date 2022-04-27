@@ -1,3 +1,5 @@
+package com.lob.kotlin.demo.syntax
+
 import java.time.Instant
 
 fun main(args: Array<String>) {
@@ -14,10 +16,12 @@ fun main(args: Array<String>) {
 data class User(val name: String, val date: Instant = Instant.now()) {
     companion object {
         fun create(xml: String): User {
-            TODO(""" 
+            TODO(
+                """ 
                 Write an Implementation creating 
                 a Person from an xml string
-                """)
+                """
+            )
         }
     }
 }

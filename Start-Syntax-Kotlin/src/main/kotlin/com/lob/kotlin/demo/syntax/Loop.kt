@@ -1,3 +1,4 @@
+package com.lob.kotlin.demo.syntax
 
 fun main(args: Array<String>) {
 
@@ -13,7 +14,7 @@ fun main(args: Array<String>) {
 
     // .. 도 증가할 범위를 만들어내며, 끝의 값을 포함한다.
     // 0, 2, 4, 6, 8, 10
-    val range = 0 .. 10 step 2
+    val range = 0..10 step 2
     for (i in range) println(i)
 
     println("----------")
@@ -50,8 +51,19 @@ fun main(args: Array<String>) {
     println("----------")
 
     // 필터를 정의하여 조건식에 따라서 내부로 넘길 값을 필터링할 수 있다.
-    for (i in (1..10).filter{ it % 3 == 0 || it % 5 == 0 }) {
+    for (i in (1..10).filter { it % 3 == 0 || it % 5 == 0 }) {
         println("$i")
+    }
+
+    // labeled loop
+    fun indexOf(subArray: IntArray, array: IntArray): Int {
+        outer@ for (i in array.indices) {
+            for(j in subArray.indices) {
+                if (subArray[j] != array[i + j]) continue@outer
+            }
+            return i
+        }
+        return -1
     }
 
 }

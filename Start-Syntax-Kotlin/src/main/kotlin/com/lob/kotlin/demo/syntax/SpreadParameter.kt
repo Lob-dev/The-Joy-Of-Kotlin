@@ -1,3 +1,4 @@
+package com.lob.kotlin.demo.syntax
 
 fun main(args: Array<String>) {
 
@@ -11,8 +12,8 @@ fun main(args: Array<String>) {
         return large
     }
 
-    println(max(1,5,6,7,20));
-    println(max(1,5,2))
+    println(max(1, 5, 6, 7, 20));
+    println(max(1, 5, 2))
 
 
     fun greetMany(msg: String, vararg names: String) {
@@ -26,13 +27,13 @@ fun main(args: Array<String>) {
     // 이렇게 하나의 인자에 대해서는 명시적으로 Array 로 나타내야 한다.
 
     // 하지만 배열 자체를 인자로 넘길 수는 없다.
-    val values = intArrayOf(1,2,3,4,5,6,7)
+    val values = intArrayOf(1, 2, 3, 4, 5, 6, 7)
     //println(max(values))
 
     // 이러한 경우 스프레드 연산자 "*"를 통해 배열의 값을 추출하여 다중 인자로 넘길 수 있다.
     println(max(*values))
 
     // 혹은 이렇게 처리할 수 있다.
-    println(max(*listOf(1,4,18,12).toIntArray()))
+    println(max(*listOf(1, 4, 18, 12).toIntArray()))
 
 }

@@ -16,3 +16,6 @@
 /Study-Spring-Cloud-Config-Kotlin/gradlew.bat
 /Study-Spring-Cloud-Config-Kotlin/gradle/*
 /Start-Syntax-Kotlin/.gitignore
+/Start-Syntax-Kotlin/gradlew
+/Start-Syntax-Kotlin/gradlew.bat
+/Start-Syntax-Kotlin/gradle/*

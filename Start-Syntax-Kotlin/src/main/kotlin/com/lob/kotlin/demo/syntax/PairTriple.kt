@@ -1,3 +1,4 @@
+package com.lob.kotlin.demo.syntax
 
 fun main(args: Array<String>) {
 
