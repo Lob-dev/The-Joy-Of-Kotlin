@@ -61,7 +61,7 @@ fun main(args: Array<String>) {
     fun readIntPair(): IntArray = intArrayOf(decimalInt(), decimalInt())
 
 
-    // HOR
+    // HOF
     fun <T> readlineBy(lambda: (String?) -> T) = lambda(readLine())
     fun decimalInt2() = readlineBy { it?.toInt(10) }
 
@@ -79,17 +79,23 @@ fun main(args: Array<String>) {
     println("sum = ${sum(intArrayOf(1, 2, 3))}")
     println("max = ${max(intArrayOf(1, 2, 3))}")
 
+    val compose: ((Int) -> Int) -> ((Int) -> Int) -> (Int) -> Int = { x -> { y -> { z -> x(y(z)) } } }
 
-    // callable reference (function)
+    fun square(n: Int) = n * n
+    fun triple(n: Int) = n * 3
+    fun <T, U, V> higherCompose(): ((U) -> V) -> ((T) -> U) -> (T) -> V = { f -> { g -> { x -> f(g(x)) } } }
+    val squareOfTriple = higherCompose<Int, Int, Int>() (::square) (::triple)
+
+        // callable reference (function)
     fun operation(number1: Int, number2: Int) = number1 + number2
     aggregate(numbers = intArrayOf(1, 2, 3), ::operation)
 
     class Greeting(val message: String)
+
     val sayGreeting = ::Greeting
     val greeting: Greeting = sayGreeting("Hello Kotlin!")
 
-
-    // tail recursive function
+        // tail recursive function
     tailrec fun binaryIndexOf(
         targetValue: Int,
         array: IntArray,
@@ -106,30 +112,29 @@ fun main(args: Array<String>) {
         }
     }
 
-    // 확장 함수 Extension Functions
-    // 기존 클래스에 변경을 가하지 않고, 새로운 기능을 추가할 수 있다.
-    // 익명 함수나 기명 함수로 선언하여 사용할 수 있다.
+        // 확장 함수 Extension Functions
+        // 기존 클래스에 변경을 가하지 않고, 새로운 기능을 추가할 수 있다.
+        // 익명 함수나 기명 함수로 선언하여 사용할 수 있다.
 
-    // String.(함수 인자) -> 함수 반환 타입 = {함수 본문}
-    // 밑의 선언의 경우 인자 없는 함수를 추가.
-    val stringExtend: String.() -> String = { "$this hello!" }
-    println(stringExtend("string"))
+        // String.(함수 인자) -> 함수 반환 타입 = {함수 본문}
+        // 밑의 선언의 경우 인자 없는 함수를 추가.
+        val stringExtend: String.() -> String = { "$this hello!" }
+        println(stringExtend("string"))
 
 
-    val lob = "Lob"
-    println(lob.stringExtend())
+        val lob = "Lob"
+        println(lob.stringExtend())
 
-    fun extendString(name: String): String {
-        return name.stringExtend()
-    }
-    println(extendString("Lob"))
+        fun extendString(name: String): String {
+            return name.stringExtend()
+        }
+        println(extendString("Lob"))
 
 
 // scope function (run, with, let, apply, also)
-}
+    }
 
-
-// inline function
+    // inline function
 /*
     Kotlin에서 사용되는 고차 함수와 함수 값은 객체로 표현되기 때문에 성능 차원에서 오버헤드가 발생한다.
     또한 이러한 함수가 외부 영역의 변수를 참조하고 있다면 이러한 변수 또한 Capturing 하는 구조로 만들어서 전달하여야 한다.
@@ -140,4 +145,4 @@ fun main(args: Array<String>) {
     반대로 noinline 변경자를 통해 inline func에서 사용하는 lambda 인자를 inlining 대상에서 제외할 수 있다. 변수가 nullable 하다면
     inline 기법을 사용할 수 없으며, class의 private, internal 변수를 사용하는 경우 최종적으로 캡슐화를 깨기 때문에 권장하지는 않는다.
  */
-inline fun hello(action: () -> Unit) = run { println("Hello") }
+    inline fun hello(action: () -> Unit) = run { println("Hello") }
