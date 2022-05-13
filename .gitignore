@@ -19,3 +19,7 @@
 /Start-Syntax-Kotlin/gradlew
 /Start-Syntax-Kotlin/gradlew.bat
 /Start-Syntax-Kotlin/gradle/*
+/Sample-Spring-Boot-Apache-POI-Kotlin/.gitignore
+/Sample-Spring-Boot-Apache-POI-Kotlin/gradlew
+/Sample-Spring-Boot-Apache-POI-Kotlin/gradlew.bat
+/Sample-Spring-Boot-Apache-POI-Kotlin/gradle/*

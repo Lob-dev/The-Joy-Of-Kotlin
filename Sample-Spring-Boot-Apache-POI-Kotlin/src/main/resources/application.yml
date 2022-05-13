@@ -1,0 +1,7 @@
+pptx:
+  font-path: "/data/etc/storage/font"
+  ppt-path: "/data/etc/storage"
+  image-storage-path: "/data/etc/storage/ppt-to-image"
+
+server:
+  port: 8081
