@@ -23,3 +23,7 @@
 /Sample-Spring-Boot-Apache-POI-Kotlin/gradlew
 /Sample-Spring-Boot-Apache-POI-Kotlin/gradlew.bat
 /Sample-Spring-Boot-Apache-POI-Kotlin/gradle/*
+/Sample-Spring-Boot-Video-Streaming-Kotlin/.gitignore
+/Sample-Spring-Boot-Video-Streaming-Kotlin/gradlew
+/Sample-Spring-Boot-Video-Streaming-Kotlin/gradlew.bat
+/Sample-Spring-Boot-Video-Streaming-Kotlin/gradle/*

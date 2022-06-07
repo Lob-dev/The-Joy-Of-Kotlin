@@ -1,0 +1,6 @@
+### video parse to hls format (filename.mp4 to m3u8, ts)
+GET http://localhost:8080/api/videos/filename/encode
+
+
+### get filename.m3u8
+GET http://localhost:8080/api/videos/filename
