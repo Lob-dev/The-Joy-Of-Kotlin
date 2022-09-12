@@ -1,1 +1,11 @@
+Spring:
+  config:
+    activate:
+      on-profile: "default"
 
+---
+
+Spring:
+  config:
+    activate:
+      on-profile: "test"

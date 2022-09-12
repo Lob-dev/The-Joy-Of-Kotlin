@@ -9,7 +9,7 @@ import org.testcontainers.utility.DockerImageName
 open class TestContainerContext {
 
     @Container
-    protected val localstack: LocalStackContainer = LocalStackContainer(DockerImageName.parse("localstack/localstack:0.11.3"))
+    protected val localstack: LocalStackContainer = LocalStackContainer(DockerImageName.parse("localstack/localstack:1.1.0"))
             .withServices(
                     LocalStackContainer.Service.SQS,
             )

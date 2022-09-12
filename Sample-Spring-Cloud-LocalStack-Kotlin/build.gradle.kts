@@ -24,6 +24,7 @@ dependencies {
 	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
+	implementation("org.testcontainers:localstack:1.17.3")
 
 	testImplementation("org.testcontainers:junit-jupiter:1.17.3")
 	testImplementation("org.testcontainers:localstack:1.17.3")
