@@ -35,3 +35,7 @@
 /Sample-Spring-Boot-JDSL-Kotlin/gradlew
 /Sample-Spring-Boot-JDSL-Kotlin/gradlew.bat
 /Sample-Spring-Boot-JDSL-Kotlin/gradle/*
+/Sample-Spring-Boot-Jooq-Batch-Kotlin/.gitignore
+/Sample-Spring-Boot-Jooq-Batch-Kotlin/gradlew
+/Sample-Spring-Boot-Jooq-Batch-Kotlin/gradlew.bat
+/Sample-Spring-Boot-Jooq-Batch-Kotlin/gradle/*

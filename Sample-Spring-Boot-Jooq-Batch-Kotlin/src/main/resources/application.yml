@@ -1,0 +1,25 @@
+spring:
+  config:
+    activate:
+      on-profile: "default"
+
+  datasource:
+    url: jdbc:mariadb://localhost:3306/sample?characterEncoding=UTF-8&serverTimezone=UTC
+    username: root
+    password: 1234
+    driver-class-name: org.mariadb.jdbc.Driver
+
+  batch:
+    job:
+      names: ${job.name:NONE}
+      enabled: false
+    jdbc:
+      initialize-schema: always
+
+logging:
+  level:
+    root: INFO
+    jdbc: TRACE
+    transaction: DEBUG
+    batch: DEBUG
+    org.jooq: DEBUG
