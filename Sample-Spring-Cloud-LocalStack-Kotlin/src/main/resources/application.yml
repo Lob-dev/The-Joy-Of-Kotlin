@@ -3,9 +3,20 @@ Spring:
     activate:
       on-profile: "default"
 
+cloud:
+  aws:
+    region:
+      static: ap-southeast-2
+      auto: false
+    credentials:
+      access-key: accesskey
+      secret-key: secretkey
+    end-point:
+      uri: http://localhost:4566
+
 ---
 
 Spring:
   config:
     activate:
-      on-profile: "test"
+      on-profile: "testcontainers"

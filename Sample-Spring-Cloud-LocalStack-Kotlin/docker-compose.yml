@@ -1,0 +1,23 @@
+version: '3.7'
+
+services:
+  localstack:
+    container_name: "localstack"
+    image: localstack/localstack:1.2.0
+    ports:
+      - "4566:4566"
+    environment:
+      - SERVICES=sqs
+      - DEBUG=1
+      - USE_SSL=0
+      - DEFAULT_REGION=ap-northeast-2
+      - HOSTNAME=localstack
+      - HOSTNAME_EXTERNAL=localstack
+      - DATA_DIR=/tmp/localstack/data
+      - DOCKER_HOST=unix:///var/run/docker.sock
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - localstack_data:/tmp/localstack/data
+
+volumes:
+  localstack_data:

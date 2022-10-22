@@ -13,15 +13,14 @@ import org.springframework.context.annotation.Profile
 import org.testcontainers.containers.localstack.LocalStackContainer
 import org.testcontainers.utility.DockerImageName
 
+@Profile("testcontainers")
 @Configuration
-class SQSConfiguration {
+class SqsTestcontainersConfiguration {
 
-    @Profile("default | test")
     @Bean
     fun queueMessagingTemplate(amazonSQS: AmazonSQSAsync): QueueMessagingTemplate =
             QueueMessagingTemplate(amazonSQS)
 
-    @Profile("default | test")
     @Bean
     fun amazonSQS(localStackContainer: LocalStackContainer): AmazonSQSAsync =
             AmazonSQSAsyncClientBuilder.standard()
@@ -47,7 +46,6 @@ class SQSConfiguration {
                                 ))
                     }
 
-    @Profile("default | test")
     @Bean(initMethod = "start", destroyMethod = "stop")
     fun localStackContainer(): LocalStackContainer =
             LocalStackContainer(DockerImageName.parse("localstack/localstack:1.1.0"))

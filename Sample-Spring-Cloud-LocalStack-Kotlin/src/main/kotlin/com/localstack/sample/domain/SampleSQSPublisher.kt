@@ -1,6 +1,6 @@
 package com.localstack.sample.domain
 
-import com.localstack.sample.config.SQSConfiguration.Companion.QUEUE_NAME
+import com.localstack.sample.config.SqsTestcontainersConfiguration.Companion.QUEUE_NAME
 import io.awspring.cloud.messaging.core.QueueMessagingTemplate
 import io.awspring.cloud.messaging.core.SqsMessageHeaders
 import org.springframework.messaging.support.MessageBuilder
