@@ -39,3 +39,9 @@
 /Sample-Spring-Boot-Jooq-Batch-Kotlin/gradlew
 /Sample-Spring-Boot-Jooq-Batch-Kotlin/gradlew.bat
 /Sample-Spring-Boot-Jooq-Batch-Kotlin/gradle/*
+/Study-Web-Application-Server-Kotlin/gradlew
+/Study-Web-Application-Server-Kotlin/gradlew.bat
+/Study-Web-Application-Server-Kotlin/gradle/*
+/Study-Web-Application-Server-Kotlin/.gradle/*
+/Study-Web-Application-Server-Kotlin/.idea/*
+/Study-Web-Application-Server-Kotlin/build/*
